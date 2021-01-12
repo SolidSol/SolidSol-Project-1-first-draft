@@ -23,15 +23,19 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly (dynamic), in addition to restricting (access) to the network.
 
-- (Question): "What aspect of security do load balancers protect?" A.) A load-balancer, in this case a Load-balancer of the software variaty have features and policy controls to stop bad traffic from ever reaching the main application, two main examples being (rate limiting) and (URL filtering). Both software and physical Load-balancers work on layers 4-7 of the OSI model (transportation, session application, presentation). Load-balancers protect against threats like (S.Q.L injection) and (Cross-site scripting (XSS)). 
+- (Question): "What aspect of security do load balancers protect?" 
+  A.) A load-balancer, in this case a Load-balancer of the software variaty have features and policy controls to stop bad traffic from ever reaching the main application, two main examples being (rate limiting) and (URL filtering). Both software and physical Load-balancers work on layers 4-7 of the OSI model (transportation, session application, presentation). Load-balancers protect against threats like (S.Q.L injection) and (Cross-site scripting (XSS)). 
 
-- (Question): "What is the advantage of a jump box?"  A.) A Jump Box is a window server that is a bridge between two trusted networks. The Jump Box is in most cases security hardened and is the main entryway to your server group. The Jump Box is usually built in front of other servers to add a security layer preventing all Azure VM's from being exposed to the public. Advantages of using a Jump box, it allows you to focus all the monitoring and logging on that one box and also a jump box allows you to turn ir off to stop all RDP (Remote Desktop Protocal) to everything when you know its not needed. 
+- (Question): "What is the advantage of a jump box?"  
+  A.) A Jump Box is a window server that is a bridge between two trusted networks. The Jump Box is in most cases security hardened and is the main entryway to your server group. The Jump Box is usually built in front of other servers to add a security layer preventing all Azure VM's from being exposed to the public. Advantages of using a Jump box, it allows you to focus all the monitoring and logging on that one box and also a jump box allows you to turn ir off to stop all RDP (Remote Desktop Protocal) to everything when you know its not needed. 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the (Configuration) and system (Files).
 
-- (Question): What does Filebeat watch for? A.) "Filebeat" watches and monitors the log files or locations that users specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing. Filebeat is a lightweight shipper for forwarding and centralizing log data. Installed as an agent on the server.
+- (Question): What does Filebeat watch for? 
+  A.) "Filebeat" watches and monitors the log files or locations that users specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing. Filebeat is a lightweight shipper for forwarding and centralizing log data. Installed as an agent on the server.
 
-- (Question): What does Metricbeat record? A.) "Metricbeat" kinda like Filebeat, but Metricbeat is a lightweight shipper that periodically collects metrics from the operating system and from services running on the server. It akes the metrics and statistics that it collects and ships them to the output that you specify.
+- (Question): What does Metricbeat record? 
+  A.) "Metricbeat" kinda like Filebeat, but Metricbeat is a lightweight shipper that periodically collects metrics from the operating system and from services running on the server. It akes the metrics and statistics that it collects and ships them to the output that you specify.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -48,7 +52,8 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 The machines on the internal network are not exposed to the public Internet. 
 
 Only the (Jump Box Provisioner) machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+- (Question): Add whitelisted IP addresses
+  A.)
 
 A summary of the access policies in place can be found in the table below.
 
@@ -61,10 +66,11 @@ A summary of the access policies in place can be found in the table below.
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+- (Question): What is the main advantage of automating configuration with Ansible?
+  A.) One of the main advantages of "Automation" within Ansible is the use of roles. Ansible Roles provide the groundwork or the road map for either fully independent,or interdependent collections of variables, tasks, files, templates and modules. These Roles simplify the writing of complex playbooks. The Rolse themselfs are not the Playbooks, but rather simple functionalities within the playbook. Basically the "legos" to your larger machine.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
+- (Question): In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
 - ...
 - ...
 
