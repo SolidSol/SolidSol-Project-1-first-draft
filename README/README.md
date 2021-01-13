@@ -53,7 +53,7 @@ The machines on the internal network are not exposed to the public Internet.
 
 Only the (Jump Box Provisioner) machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
 - (Question): Add whitelisted IP addresses
-  A.)
+  A.)My Ip
 
 A summary of the access policies in place can be found in the table below.
 
@@ -91,12 +91,12 @@ This ELK server is configured to monitor the following machines:
 
 We have installed the following Beats on these machines:
 - : Specify which Beats you successfully installed
-A.) Filebeat and MetricBeat
+ A.) Filebeat and MetricBeat
 
 These Beats allow us to collect the following information from each machine:
 - (Question): In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc.
-A.) Filebeat watches/monitors log files, log events and locations that users specify,   Example: Inputs and harvesters
-A.) Metricbeat watches for any information in the file system which has been changed/altered and time frame. Takes the statistics
+ A.) Filebeat watches/monitors log files, log events and locations that users specify,   Example: Inputs and harvesters
+ A.) Metricbeat watches for any information in the file system which has been changed/altered and time frame. Takes the statistics
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
@@ -108,10 +108,10 @@ SSH into the control node and follow the steps below:
 
 _TODO: Answer the following questions to fill in the blanks:_
 - _Which file is the playbook? Where do you copy it?
-A.)
+ A.)
 - _Which file do you update to make Ansible run the playbook on a specific machine? How do I specify which machine to install the ELK server on versus which to install Filebeat on?_
-A.)
+ A.)
 - _Which URL do you navigate to in order to check that the ELK server is running?
-A.)http://[ElkProject1VM-ip]:5601/app/kibana
+ A.)http://[ElkProject1VM-ip]:5601/app/kibana
 
 _As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
